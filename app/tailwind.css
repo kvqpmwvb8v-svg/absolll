@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom organic/editorial base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary font-display antialiased;
+    caret-color: #e8e8f0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tighter;
+    color: #e8e8f0;
+  }
+
+  p, ol, ul, dl {
+    @apply leading-relaxed text-text-muted;
+  }
+
+  a {
+    @apply text-green-primary hover:underline transition-colors;
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Subtle focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-green-primary/20 ring-offset-2;
+  }
+}
+
+/* Organic/editorial transitions at layer components */
+@layer components {
+  /* Buttons - minimal, editorial */
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-primary/20 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-green-primary text-bg-primary hover:bg-bg-primary hover:text-text-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-bg-secondary text-text-primary hover:bg-green-primary hover:text-bg-primary;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-text-primary hover:bg-bg-secondary hover:text-green-primary transition-colors;
+  }
+
+  /* Cards - minimal per brief */
+  .card {
+    @apply bg-bg-secondary backdrop-blur-sm border border-border rounded-md p-6;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-12 md:py-20 lg:py-24;
+  }
+
+  .section-gap {
+    @apply gap-6 md:gap-8 lg:gap-12;
+  }
+}
+
+/* Organic shape mask utility (if needed) */
+@layer utilities {
+  .mask-organic {
+    -webkit-mask: url("/images/organic-mask.svg") center/cover no-repeat;
+    mask: url("/images/organic-mask.svg") center/cover no-repeat;
+  }
+}

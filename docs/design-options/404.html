@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Страница не найдена</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0A0A0F;
+      --bg-secondary: #12121A;
+      --accent: #0F766E;
+      --text-primary: #E8E8F0;
+      --text-muted: #737383;
+      --border: #2A2A3A;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.2;
+    }
+    
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #1a8c7c; }
+    
+    .container { max-width: 720px; margin: 0 auto; padding: 0 1rem; flex: 1; display: flex; flex-direction: column; }
+    
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+    }
+    
+    .header-content { display: flex; align-items: center; justify-content: space-between; }
+    
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 700; color: var(--text-primary); }
+    
+    .nav a { margin-left: 1.5rem; color: var(--text-muted); font-size: 0.875rem; transition: color 0.2s; }
+    .nav a:hover { color: var(--accent); }
+    
+    .main-content { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 4rem 0; text-align: center; }
+    
+    .error-number { font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem, 12vw, 8rem); font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 1rem; }
+    
+    .error-title { font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 600; margin-bottom: 1rem; }
+    
+    .error-desc { color: var(--text-muted); font-size: 1.125rem; max-width: 480px; margin: 0 auto 2rem; }
+    
+    .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--accent); color: var(--bg-primary); font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; border-radius: 0; transition: background 0.2s; cursor: pointer; }
+    .btn:hover { background: #1a8c7c; }
+    
+    .back-link { color: var(--text-muted); font-size: 0.875rem; margin-top: 2rem; }
+    .back-link a { color: var(--accent); }
+    
+    footer { border-top: 1px solid var(--border); padding: 2rem 0; color: var(--text-muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="#" class="logo">ABSOLUTI</a>
+      <nav class="nav">
+        <a href="#about">О клубе</a>
+        <a href="#events">Мероприятия</a>
+        <a href="#news">Новости</a>
+        <a href="#photos">Фото</a>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="container main-content">
+    <div class="error-number">404</div>
+    <h1 class="error-title">Страница не найдена</h1>
+    <p class="error-desc">Запрашиваемая страница не существует или была удалена. Проверьте URL или вернитесь на главную.</p>
+    <a href="#" class="btn">На главную</a>
+    <p class="back-link">Или <a href="#about">ознакомьтесь с клубом</a></p>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <p>ABSOLUTI — Исторический клуб · 2024</p>
+    </div>
+  </footer>
+  
+</body>
+</html>

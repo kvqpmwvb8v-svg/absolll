@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABSOLUTI — Исторический клуб</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #F9F7F3;
+      --bg-dark: #0A0A0F;
+      --bg-secondary: #FFFFFF;
+      --accent: #0F766E;
+      --text-dark: #0A0A0F;
+      --text-light: #E8E8F0;
+      --text-muted: #6B6B6B;
+      --border: #E0DED5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.2;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #1a8c7c; }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 1rem; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      background: var(--bg-light);
+      z-index: 100;
+    }
+
+    .header-content { display: flex; align-items: center; justify-content: space-between; }
+
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 700; color: var(--text-dark); }
+
+    .nav a { margin-left: 1.5rem; color: var(--text-muted); font-size: 0.875rem; transition: color 0.2s; }
+    .nav a:hover { color: var(--accent); }
+
+    .section { padding: 3rem 0; }
+
+    .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+
+    .grid { display: grid; gap: 1rem; }
+    @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .card { border: 1px solid var(--border); border-radius: 0; padding: 1.5rem; background: var(--bg-secondary); }
+
+    .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--accent); color: #FFFFFF; font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; border-radius: 0; transition: background 0.2s; cursor: pointer; }
+    .btn:hover { background: #1a8c7c; }
+
+    .hero { text-align: center; padding: 4rem 1rem 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-dark); }
+    .hero p { font-size: 1.125rem; max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; color: var(--text-muted); }
+
+    .dark-section {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 4rem 0;
+    }
+
+    .dark-section .section-title { color: var(--text-light); border-bottom-color: #2A2A3A; }
+
+    .dark-section .card { background: #12121A; border-color: #2A2A3A; }
+
+    .dark-section .nav a { color: var(--text-muted); }
+
+    footer { border-top: 1px solid var(--border); padding: 2rem 0; margin-top: 4rem; color: var(--text-muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="#" class="logo">ABSOLUTI</a>
+      <nav class="nav">
+        <a href="#about">О клубе</a>
+        <a href="#events">Мероприятия</a>
+        <a href="#news">Новости</a>
+        <a href="#photos">Фото</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Добро пожаловать в Современное Историческое Общество</h1>
+      <p>Мы объединяем исследователей, энтузиастов и всех, кто ценит истинную историю. Отказываемся от шаблонных "AI-всего" и делимся качественными знаниями.</p>
+      <a href="#about" class="btn">Узнать больше</a>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-title">Наша миссия</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Качественные статьи</h3>
+          <p>Глубокие исследования и интересные факты из мира истории.</p>
+        </div>
+        <div class="card">
+          <h3>Мероприятия</h3>
+          <p>Лекции, обсуждения, экскурсии и исторические игры.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="container">
+        <h2 class="section-title">Как присоединиться</h2>
+        <div class="grid">
+          <div class="card">
+            <p>Просто зарегистрируйтесь в админ-панели, чтобы публиковать статьи или участвовать в мероприятиях. Все контент хранится в обычных MDX-файлах — никаких баз данных, никакого "волшебного интеллекта".</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>ABSOLUTI — Исторический клуб · 2024</p>
+    </div>
+  </footer>
+
+</body>
+</html>
